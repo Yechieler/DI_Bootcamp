@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(149, 211, 176);
+    border-left: 8px solid rgb(66, 189, 121);
+    border-style:ridge;
+    margin:0;
+}
+
+
+.exercise1 {
+    background-color: #C0F7D7;
+    border-color: #27C76B;
+    border-style:dotted;
+    padding: 30px;
+    margin: 50px;
+}
+nav {
+    text-align: center;
+}
+nav a {
+    text-decoration-line:none ;
+    border: 2px solid orange;
+}
+
+section ul li{
+    display: inline-block;
+    padding: 50px 5px;
+    
+}
+
+.blue {
+    background-color: blue;
+    display: column;
+    margin: 0;
+    color:blue;
+}
+.white {
+    background-color: white;
+    margin: 0;
+    color: white;
+}
+.red {
+    background-color: red;
+    margin: 0;
+    color:red;
+}
+.blueblue {
+    color:blue;
+}
+
+/* div p {
+    background-color: pink;
+    color: white;
+} */
+
+#gray {
+    background-color: gray;
+}
+
+#blue {
+    background-color: blue;
+}
+#orange {
+background-color: orange;
+
+
+
+/* 
+this, this, this {
+}
+
+parent child {
+} 
+
+parent>directchild {
+}
+
+sibling~sibling  {
+}
+
+next+toeachother {
+}
+
+
+*/
