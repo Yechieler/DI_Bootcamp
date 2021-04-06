@@ -5,7 +5,7 @@ section {
     align-items: center;
     justify-content: space-around;
 }
-.sidediv {
+.sidedivs {
     /* border: 3px black solid; */
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ section {
 
 .box { 
     background-color: yellow;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid black;
     padding: 8px;
     margin: 5px;
 
