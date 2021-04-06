@@ -1,0 +1,73 @@
+.section {  /*working with container*/
+    display:flex;
+    flex-direction: column;  /* row is default, */
+    justify-content: space-around;    
+    align-items: center;  /* aligns content*/
+    flex-wrap: wrap; /*allows items to wrap around on a shrining screen*/ 
+    flex-grow: 1; /*used with class in example at 11:30pm   what is flex grow?*/  
+    flex-basis: 200px; /*what is fex basis */
+}
+
+/* header {
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.head {
+    background-color: red;
+    width: auto;
+    height: auto;
+    
+}
+
+section {
+    background-color:pink ;
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    width: 50%;
+
+} */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;   
+    border:3px solid red;
+    justify-content: space-between;
+}
+div {
+    background-color: royalblue;
+    text-align: center;
+}
+.div1 {
+    align-self: stretch; /**/
+    height: 50px;
+}
+.div2 {
+    width:40%;
+    padding: 40px;
+    
+}
+
+
+/**************************************/
+.class {
+    display: grid; /* 2D work with colums and rows adviced to use fraction*/
+    grid-template-columns: repeat(3,1fr); /*fraction is more acturate   repeat 3 x's by 1fractoion*/
+    grid-template-rows: repeat(2,100px);/*repeat 2 x 100px*/
+    /* or */    
+}
+ .class1 {
+     display: grid;
+     grid-template-columns: 2fr 2fr 2fr;
+     grid-template-rows: 1fr 2fr 1fr;
+     grid-row-gap: 20px; /*gaps a row*/
+     grid-column-gap: 20px; /*gaps column*/
+
+     grid-row: 1/span 3;  /* 1 expention to 3rd row*/
+     grid-column: 1/span 2;
+ }
