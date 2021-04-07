@@ -1,0 +1,56 @@
+.sectiongridarea{
+	width: 60%;
+	/* justify-content: center; */
+	margin:auto;
+	border: 1px solid black;
+	background-color: gainsboro;
+	display: grid;
+	grid-gap: 2px 3px;
+	grid-template-rows: 2fr 4fr 2fr 1fr 1fr 3fr 4fr; 
+	grid-template-columns: repeat(4,1fr);
+	grid-template-areas:
+	"Header Header Header Header"
+	"Hero Hero     Main   Main"
+	 "Hero Hero     Main Main"
+	"Sidebar Sidebar Main Main"
+    "Sidebar Sidebar Extra Extra" 
+    "relatedimg relatedimg relatedimg Post"
+    "footer footer footer footer"; 
+}
+
+
+.greenbox {
+	grid-area : Header;
+	background-color: green;
+}
+.sidebar {
+	grid-area: Sidebar;
+	background-color: aqua;
+}
+.extra {
+	grid-area: Extra;
+	background-color: brown;
+}
+.relatedimg {
+	grid-area: relatedimg;
+	background-color: coral;
+}
+.post {
+	grid-area: Post;
+	background-color: darkcyan;
+}
+
+.purplebox {
+	grid-area : Main;
+	background-color:purple ;
+}
+
+.pinkbox{
+    grid-area : Hero;
+	background-color: pink;
+}
+
+.bluebox{
+    grid-area : footer;
+	background-color: blue;
+}
