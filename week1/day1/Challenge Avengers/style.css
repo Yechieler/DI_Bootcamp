@@ -1,0 +1,19 @@
+body {
+    background-image: url(image/ironman.png);
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    color:white;
+    padding: 10px;
+    list-style-type: none;
+    
+}
+h1 {
+    border: 3px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
