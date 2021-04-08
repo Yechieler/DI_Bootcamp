@@ -1,0 +1,194 @@
+.sectiongridarea{
+  height: 500px;
+	width: 60%;
+	/* justify-content: center; */
+	margin:auto;
+	border: 1px solid black;
+	background-color: gainsboro;
+	display: grid;
+	grid-gap: 5px 5px;
+	grid-template-rows: 3fr 3fr 3fr 3fr 3fr; 
+	grid-template-columns: repeat(4,1fr);
+	grid-template-areas:
+	"a a a a"
+	"b b c c"
+	"b b d d"
+	"e e f f"
+  "g g h h"; 
+}
+.fade {
+  opacity: 0.5;
+}
+
+.fade:hover {
+  opacity: 4;
+}
+
+
+.a {
+  grid-area: a;
+  width: 100%;
+  height: 100%;
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #001F3F;
+  }
+  100% {
+    background-color: #FF4136;
+  }
+}
+
+.b {
+  grid-area: b;
+  height:130px;
+  width: 150px;
+  margin: auto;
+  background-color: rgb(80, 8, 8);
+  animation-name: stretch;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    background-color: rgb(1, 117, 20);
+    border-radius: 100%;
+  }
+  50% {
+    background-color: rgb(68, 0, 255);
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: rgb(255, 0, 221);
+  }
+}
+
+.c {
+  grid-area: c;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: c;
+  animation-duration: 30s;
+  animation-iteration-count:infinite
+}
+
+@keyframes c {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+.d {
+  grid-area: d;
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  background: lightgreen;
+  animation-name: spinn;
+  animation-duration: 400ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: rotate(360deg);
+  
+}
+@keyframes spinn {
+  from {transform:rotate(40deg);}
+  to {transform:rotate(360deg);}
+}
+
+
+
+
+.e {
+  grid-area: e;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  animation-name: e;
+  animation-duration: 4s;
+  animation-direction: reverse;  
+  animation-iteration-count:infinite
+}
+
+@keyframes e {
+  0%   {background-color:rgb(3, 0, 0); left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:rgb(0, 0, 2); left:200px; top:200px;}
+  75%  {background-color:yellow; left:0px; top:200px;}
+  100% {background-color:rgb(3, 0, 0); left:0px; top:0px;}
+}
+
+.f {
+  grid-area: f;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: f;
+  animation-duration: 4s;
+  animation-iteration-count:infinite;
+  animation-direction: alternate-reverse;  
+}
+
+@keyframes f {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+.g {
+  grid-area: g;
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: g;
+  animation-duration: 3s;  
+  animation-iteration-count:infinite;
+
+}
+
+@keyframes g {
+  from {top: 0px;}
+  to {top: 200px; background-color: blue;}
+}
+
+.h {
+  grid-area: h;
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  background: rgb(0, 255, 13);
+  animation-name: spin;
+  animation-duration: 40000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 40000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 40000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: rotate(3600deg);
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
