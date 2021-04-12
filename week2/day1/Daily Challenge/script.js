@@ -32,4 +32,4 @@ console.log(fruits);
 //access and then console.log “Oranges”.
 let moreFruits = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 
-console.log(moreFruits[1][1]);
+console.log(moreFruits[1][1][0]);
