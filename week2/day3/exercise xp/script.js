@@ -141,25 +141,25 @@
 // Hint: Look up the statement if ... in
 // If the name is not in the object, console.log: "Hi! I'm a guest."
 
-// let guestList = {
-//   randy: "Germany",
-//   karla: "France",
-//   wendy: "Japan",
-//   norman: "England",
-//   sam: "Argentina"
-// }
-// let name = prompt("what is your name?")
+let guestList = {
+  randy: "Germany",
+  karla: "France",
+  wendy: "Japan",
+  norman: "England",
+  sam: "Argentina"
+}
+let name = prompt("what is your name?")
 
-// if (guestList[name] !== undefined){
-//     console.log(`Hi! I'm ${name}, and I'm from ${guestList[name]}.`);
-// } else {
-//     console.log("Hi! I'm a guest.")
-// }
+if (guestList[name] !== undefined){
+    console.log(`Hi! I'm ${name}, and I'm from ${guestList[name]}.`);
+} else {
+    console.log("Hi! I'm a guest.")
+}
 
 
-// if (prompt===Object.keys(guestList)) {
-// 	console.log(Object.values(guestList));
-// }
+if (prompt===Object.keys(guestList)) {
+	console.log(Object.values(guestList));
+}
 
 
 
