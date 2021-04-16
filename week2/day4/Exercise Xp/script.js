@@ -53,19 +53,24 @@
 // changeEnough([2, 100, 0, 0], 14.11) ➞ false
 // changeEnough([0, 0, 20, 5], 0.75) ➞ true
 
-// function changeEnough([quarters,dimes,nickels,pennies],itemPrice ) {
-//     let pocket = (quarters==0.25) + (dimes==0.10) + (nickels==0.05) + (pennies==0.01);
-//     console.log(pocket)
-//     if (pocket>=itemPrice) {
-//         console.log(true)
-//         return true;
-//     }
-//    else {
-//     console.log(false)
-//     return false;
-//   }
-// }
-// changeEnough([0,0,20,5],0.75);
+
+
+
+function changeEnough([quarters,dimes,nickels,pennies],itemPrice ) {
+    let  = pocket = (quarters*0.25) + (dimes*0.10)  + (nickels*0.05) + (pennies*0.01);
+   console.log(pocket.toFixed(2))
+    if (pocket>=itemPrice){
+        console.log(true)
+        return true;
+    } else {
+        console.log(false)
+        return false;
+    }
+}
+changeEnough([20,20,20,20], 7.50);
+
+
+
 
 
 
@@ -74,27 +79,28 @@
 
 // Exercise 3: Find The Multiples Of 23
 // Instructions
-// Write a js function that console.logs all multiples of 23 less than 500, at the end return the sum of all the multiples.
+// Write a js function that console.
+//logs all multiples of 23 less than 500, 
+//at the end return the sum of all the multiples.
 
-function multipleof23() {
-    let multiple = 0;
-    let arr = []
+// function multipleof23() {
+//     let multiple = 0;
+//     let arr = []
 
-    while(multiple <= 500) {
-        arr.push(multiple);
-        multiple += 23;
-    }
-    console.log(arr);
-    let total = 0;
+//     while(multiple <= 500) {
+//         arr.push(multiple);
+//         multiple += 23;
+//     }
+//     console.log(arr);
+//     let total = 0;
 
-    for(i in arr) {
-        total += arr[i];
-    }
-    console.log(total)
-}
+//     for(i in arr) {
+//         total += arr[i];
+//     }
+//     console.log(total)
+// }
 
-multipleof23();
-
+// multipleof23();
 
 
 
@@ -129,11 +135,42 @@ multipleof23();
 // let the user know if the item is in the basket
 // Hint: Use the in keyword inside the conditional
 
-let amazonBasket = {
-    glasses: 1,
-    books: 2,
-    floss: 100
-}
-function checkBasket(params) {
-    prompt("choice an item.")
+// let amazonBasket = {
+//     glasses: 1,
+//     books: 2,
+//     floss: 100
+// }
+// function checkBasket(params) {
+//     prompt("choice an item.")
+// }
+
+
+
+// Exercise 6 : Tips
+// Instructions
+
+// John created a simple tip calculator to help calculate how much to tip when he and his family go to restaurants.
+
+// The calculator has the following rules:
+// 1. Tip 20% when the bill is less than $50,
+// 2. Tip 15% when the bill is between $50 and $200,
+// 3. Tip 10% if the bill is more than $200.
+
+// Ask John for the amount of the bill.
+// Create the program explained above.
+// In the end, John would like to know:
+// Tip amount.
+// Final bill (bill + tip).
+// (NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
+
+function calcTip(bill) {
+    if (bill < 50) {
+        tip = bill * 0.2;
+    } else if (bill >= 50 && bill <= 200) {
+        tip = bill * 0.15
+    } else if (bill > 200) {
+        tip = bill * 0.1;
+    }
+    return bill;
+    
 }
