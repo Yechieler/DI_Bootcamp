@@ -1,4 +1,4 @@
-let userNumb = prompt(`Pick a number to begin counting down bottles`);
+let userNumb =  prompt(`Pick a number to begin counting down bottles`);
 
 while(isNaN(userNumb) ||  userNumb == "" ) {
     userNum = prompt("Please type a 'number' for the song.");

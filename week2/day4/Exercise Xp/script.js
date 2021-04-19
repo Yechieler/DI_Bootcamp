@@ -135,14 +135,20 @@ changeEnough([20,20,20,20], 7.50);
 // let the user know if the item is in the basket
 // Hint: Use the in keyword inside the conditional
 
-// let amazonBasket = {
-//     glasses: 1,
-//     books: 2,
-//     floss: 100
-// }
-// function checkBasket(params) {
-//     prompt("choice an item.")
-// }
+let amazonBasket = {
+    glasses: 1,
+    books: 2,
+    floss: 100
+}
+function checkBasket() {
+    let item = prompt("What item do you want?")
+    if (item in amazonBasket) {
+        console.log(`Your item "${item}" is in your Basket.`)
+    } else {
+        console.log(`I could not find the item '${item}' in your Amazon basket`);
+}}
+
+checkBasket();
 
 
 
