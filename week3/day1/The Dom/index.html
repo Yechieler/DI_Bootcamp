@@ -7,13 +7,104 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>The Dom</h1>
+    <!-- <h1>The Dom</h1>
 
     <div id="container">Users:</div>
   <ul>
     <li>John</li>
     <li>Pete</li>
-  </ul>
+  </ul> -->
+
+  <!-- <p>This is the welcome message.</p>
+  <h2>Technology</h2>
+  <p id="second">This is the technology section.</p>
+
+  <script>
+    let paragraphs = document.getElementsByTagName("p");
+    alert("Content in the second paragraph is " + paragraphs[1].innerHTML);
+    document.getElementById("second").innerHTML = "The orginal message is changed.";
+  </script>
+    -->
+<!-- 
+    <ul>
+      <li>The</li>
+      <li>test</li>
+    </ul>
+    <ul>
+      <li>has</li>
+      <li>passed</li>
+    </ul>
+
+
+    <script>
+      let elements = document.querySelectorAll('ul > li:last-child');
+
+      for (let elem of elements) {
+        alert(elem.innerHTML); // "test", "passed"
+      }
+
+    </script> -->
+
+
+    <!-- <a href="http://example.com/file.zip">...</a>
+    <a href="http://ya.ru">...</a>
+    
+    <script>
+      // can be any collection instead of document.body.children
+      for (let elem of document.body.children) {
+        if (elem.matches('a[href$="zip"]')) {
+          // check if it ends with "zip"
+          alert("The archive reference: " + elem.href );
+        }
+      }
+    
+    </script>
+ -->
+ <!-- <div id="container">Users:</div>
+ <ul class="list">
+   <li>John</li>
+   <li>Pete</li>
+ </ul>
+ <ul class="list">
+   <li>Sarah</li>
+   <li>Dan</li>
+ </ul> -->
+
+
+ <!-- <div id="elem" about="Elephant" style=""></div>
+
+ <script>
+   let newDiv = document.getElementById("elem")
+
+   //getAttribute('name attribute')
+   newDiv.getAttribute('about'); // return 'Elephant'
+
+   //setAttribute(name attribute, value attribute)
+   newDiv.setAttribute('style', "color:blue;");   -->
+
+   <!-- //you get <div id="elem" about="Elephant" style="color:blue" ></div> -->
+
+   <!-- //loop through the attributes of an element
+//    for (let attr of elem.attributes) { // Lists all attributes
+//      alert(attr.name + '=' + attr.value);
+//    }
+<!-- //  </script>  -->
+<!-- 
+<input type="text" id="elem" value="Write your name">
+
+<script>
+  let newInput= document.getElementById("elem")
+  elem.type; // "text"
+  elem.id; // "elem"
+  elem.value // "Write your name"
+</script> -->
+
+<!-- ex 1 page 2 -->
+
+<p>
+  <a id="dI" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://developers.institute/">Developers Institute</a>
+</p> 
+
 
     <script src="script.js"></script>
 </body>
