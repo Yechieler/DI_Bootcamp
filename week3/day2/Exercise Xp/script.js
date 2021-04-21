@@ -1,4 +1,26 @@
-//1 Using DOM methods, remove the last paragraph in the <article> tag from the DOM.
+{/* <article>
+    <h1> Some Facts </h1>
+    <h2> The Chocolate </h2>
+    <h3>History of the chocolate</h3>
+    <p> Chocolate is made from tropical Theobroma cacao tree seeds. 
+    Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+    <p> After the European discovery of the Americas, chocolate became 
+    very popular in the wider world, and its demand exploded. </p>
+    <p> Chocolate has since become a popular food product that millions enjoy every day, 
+    thanks to its unique, rich, and sweet taste.</p> 
+    <p> But what effect does eating chocolate have on our health?</p> 
+</article>
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit" id="submit">
+</form> 
+<div class="usersAnswer"></div>
+
+
+//1 Using DOM methods, remove the last paragraph in the <article> tag from the DOM. */
 
 let element = document.getElementsByTagName('article')[0];
 console.log(element);
@@ -23,6 +45,8 @@ h2element.addEventListener("click",function() {
 
 
 //3 Set the font size of the h1 tag to a random pixel size between 0 to 100.(Check out this documentation)
+
+
 
 
 //4 Add an event listener which will hide the h3 when it’s clicked on (use the display property).
