@@ -1,0 +1,88 @@
+<!-- 1 need a section
+html
+2 button.
+
+
+3 2 grids. 
+css
+
+4 left grid needs 3 colums and 7 rows. 
+css
+4.1  needs to have spacing and each box needs a different color.
+css
+
+4.2 when clicked upon mouse needs to store the color.
+javascript/DOM eventlistener
+
+5. right grid needs to have 100>||< grid boxes. 
+6 when clicked upon needs to change color color of boxes. 
+javascript/DOM eventlistener
+
+7. button in corner needs to revert all colors back to origin color. -->
+
+# Step 1
+1. HTML, CSS, JS files
+## Part I : HTML
+1. Section in the HTML (background grey)
+## Part II : JS
+1. The left part
+	1. Create the CLEAR button and the pallet in the javascript
+	2. Create div elements
+	3. those div and the button need to have class(es) or id - classList property
+2. The right part
+	1. Create the cells of the grid
+	2. Loops : 1000 cells
+## Part III: CSS
+1. For the left part : grid
+	1. For the CLEAR button (to expand the width of the button): span (a value of grid)
+2. For the right part : grid
+
+​
+# Step 2
+​
+In the JS FILE
+​
+## Part I : Click on a color and retrieve this color
+Goal : Each color on left part, need to have addEventListener "click"
+​
+1. Retrieve the div (of the palet) - byclassName, querySelectorAll - and store them in a variable 
+2. need to loop through all those div (FOR LOOP)
+3. retrieve each div and I add an event listener of "click", and add the callback function
+​
+	element.addEventListener(event, callback function)
+​
+-------------------------------------------------------------------------
+​
+1. Create a global variable to hold the color: let holdColor;
+2. Callback function : 
+	1. retrieve the backgroundColor of the div I clicked - HOW
+	2. we can use the event object with target -- holdColor = event.target.style.backgrounColor
+​
+​
+## Part II : Click on a cell of the grid, and add the color to the cell
+​
+1. To add an event listener to the cell - when you create the cells using a for loop, add to each new cell an addEventListener
+​
+	element.addEventListener(event, callback function)
+​
+	1. The event should be "click"
+	2. callback function - change the backgroundColor of the cell depending on the value of the variable holdColor
+​
+​
+## Part III : Click on "Clear" buttob, and clear the cells
+​
+1. Add an event listener to the button 
+​
+	element.addEventListener(event, callback function)
+​
+	1. event: "click" 
+	2. callback function : Loop through all the cells - change the backgroundColor of the cells to white
+​
+## Part IV : Click on the cells with the mouse pressed , paint the cells
+​
+1. Every cell, need to add event listener "mousedown"
+2. While we continue pressing, we can paint several cells
+​
+1. Every cell, need to add event listener "mouseup"
+​
+1. Every cell, need to add event listener "mouseover"

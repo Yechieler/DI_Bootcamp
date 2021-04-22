@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: row;
+
+}
+#main {
+    display: grid;
+    grid-template-columns: repeat(60, 1fr);
+    /* grid-template-rows: repeat(8, 1fr); */
+    gap: 1px;
+    height: 98.5vh;
+    background-color: darkgrey;
+    border: 2px red solid;
+    padding: 5px 5px 5px 0;
+    width: 70%;
+}
+#sidebar {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    height: 98.5vh;
+    width: 30%;
+    background-color: darkgrey;
+    border: 2px red solid; 
+    padding: 5px;
+    /* grid-area: ; */
+}
+button {
+    grid-column:1/ span 3 ;
+}
+div {
+    background-color: white;
+}
