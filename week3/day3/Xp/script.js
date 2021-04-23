@@ -1,5 +1,5 @@
 //Grabbing object
-let container = document.getElementById("animate");
+let redbox = document.getElementById("animate");
 
 //creating function to use sevrel times
   function myMove() {
@@ -10,7 +10,7 @@ let container = document.getElementById("animate");
      clearInterval(interval); // you need when using seInterval.. "stoping" animation
    } else {   //otherwise continue moving.
      position++;
-     container.style.left=position+"px"  // move left
+     redbox.style.left=position+"px"  // move left
    }
  }
 }

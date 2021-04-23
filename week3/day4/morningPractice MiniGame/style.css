@@ -7,11 +7,12 @@ body {
     flex-direction: row;
 
 }
+.canvus {
+    border: 1px solid darkgray
+}
 #main {
     display: grid;
     grid-template-columns: repeat(60, 1fr);
-    /* grid-template-rows: repeat(8, 1fr); */
-    gap: 1px;
     height: 98.5vh;
     background-color: darkgrey;
     border: 2px red solid;
