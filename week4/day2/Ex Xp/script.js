@@ -58,16 +58,23 @@
 // const add5 = (num) => num + 5;
 // compose(add1, add5)(10)
 
-const compose = (f, g) => (a) => {
-    // f(g(a));
-console.log(f,g,a);
-}
-const add1 = (num) => num + 1;
-                                        // num = 15, 15 + 1 
-const add5 = (num) => num + 5;         //num = 10, 10 +5
-console.log(compose(add1, add5)(10));   //(a)=10
+// const compose = (f, g) => (a) => {
+//     // f(g(a));
+// console.log(f,g,a);
+// }
+// const add1 = (num) => num + 1;
+//                                         // num = 15, 15 + 1 
+// const add5 = (num) => num + 5;         //num = 10, 10 +5
+// console.log(compose(add1, add5)(10));   //(a)=10
 
 // add1(add5(10))
 // 6 10 
 // answer 16
 
+
+const compose = (f, g) => (a) => f(g(a));
+    
+const add1 = (num) => num + 1;
+                                        
+const add5 = (num) => num + 5;         
+console.log(compose(add1, add5)(10));
