@@ -25,9 +25,13 @@ const gameInfo = [
     },
    ];
 
-   let userArray;
-   gameInfo.forEach((username ) => {
-       console.log(username.username)
-       return;
+   let userArray =[];
+   gameInfo.forEach((item,i,arr ) => {
+     if (item.score>=5){
+
+       //  console.log(item.username);
+       userArray.push(item.username)
+      }
     });
+    console.log(userArray);
    
