@@ -93,18 +93,18 @@
 // Write a JavaScript program that displays the colors in the following order : “1st choice is Blue .” “2nd choice is Green.” “3rd choice is Red.” ect…
 // Hint : Use the array methods taught in class.
 
-// let color = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
-// let ordinal = ["st","nd","rd","th"];
+let color = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+let ordinal = ["st","nd","rd","th"];
 
 
-//     color.forEach((colors, i) => {
-//         if (i<=3) {
-//             console.log(`${[i +1]}${ordinal[i]} choice is ${color[i]}`)
-//         } 
-//         else{
-//             console.log(`${[i +1]}${ordinal[3]} choice is, ${color[i]}`);
-//         }
-//     });
+    color.forEach((colors, i) => {
+        if (i<=3) {
+            console.log(`${[i +1]}${ordinal[i]} choice is ${color[i]}`)
+        } 
+        else{
+            console.log(`${[i +1]}${ordinal[3]} choice is, ${color[i]}`);
+        }
+    });
 
 // Exercise 5 : Is It A String ?
 // Instructions
@@ -115,21 +115,21 @@
 // //false
 
     
-// function isString(param) {
-//         if (typeof(param) === 'string'){
-//             console.log('is a string');
-//         } else {
-//             console.log("isn't a string");
-//         }
+function isString(param) {
+        if (typeof(param) === 'string'){
+            console.log('is a string');
+        } else {
+            console.log("isn't a string");
+        }
 
-//     };
-//     isString("string");
-//     isString(2);
+    };
+    isString("string");
+    isString(2);
     
 // ex 5 arrow function
 
-    // const isString = param =>{ typeof(param) === 'string' ?  console.log('is a string') : console.log('is a string')}
-    // isString(88);
+    const isString = param =>{ typeof(param) === 'string' ?  console.log('is a string') : console.log('is a string')}
+    isString(88);
 
 
     // Exercise 6 : Bank Details
