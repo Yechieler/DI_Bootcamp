@@ -22,7 +22,7 @@ body {
     margin-top: 50px;
     justify-items: center;
 }
-#robo {
+#grid > div {
     background-color: lightskyblue;
     background-image: url(/images/card-pattern.png);
     border-radius: 3%;

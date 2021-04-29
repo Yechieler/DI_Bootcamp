@@ -94,28 +94,36 @@ for (let i = 0; i < robots.length; i++) {
     const card = document.createElement('DIV');
     card.setAttribute('id','robo');
     let robotName = document.createElement('H2');
+    let robotEmail = document.createElement('H4');
     let roboimg = document.createElement('img');
     robotName.innerText=robots[i].name
+    robotEmail.innerText=robots[i].email
     roboimg.setAttribute('src',robots[i].image);
     card.append(roboimg);
     grid.appendChild(card);
     card.appendChild(robotName);
+    card.append(robotEmail)
 }    
 }
 forever(robots);
 
 const searchbox = () => {
-    let myInput = document.getElementById('input').value;
-    console.log(myInput);
+    let myInput = document.getElementById('input').value.toLowerCase();
+
+    let allRobots = document.querySelectorAll('#grid > div');
+    for (let i = 0; i < allRobots.length; i++) {
+      
+    }
+    
     
     let filterRobot = robots.filter(item => {
-        if (item.name.includes(myInput)){
+        if (item.name.toLowerCase().includes(myInput)){
             return item;
         } 
     }) 
-    
     console.log(filterRobot);
 }
+
 
 
 input.addEventListener('keyup',searchbox)
