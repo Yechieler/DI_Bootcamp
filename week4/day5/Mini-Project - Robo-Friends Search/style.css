@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: blue;
+    background-image: url(/images/circuit-pattern.png);
+    font-family:fantasy ;
+}
+#nav{
+    background-color: #6adf81f6;
+	padding:1rem 2rem;
+	gap:1rem;
+	position: sticky;
+	top: 0;
+}
+#grid {
+    display: grid;
+    grid-gap:  2rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px 5px 5px 0;
+    margin-top: 50px;
+    justify-items: center;
+}
+#robo {
+    background-color: lightskyblue;
+    background-image: url(/images/card-pattern.png);
+    border-radius: 3%;
+}
+h1 {
+    display: inline;
+    font-family: 'SEGA LOGO FONT';
+    margin: 3rem;
+}
+
+
+
+img{
+    /* border: 3px solid red; */
+    border-radius: 50%;
+    justify-self: center;
+    background-color: black;
+    margin: 5px;
+}
