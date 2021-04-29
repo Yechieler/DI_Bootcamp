@@ -111,11 +111,11 @@ const searchbox = () => {
     let myInput = document.getElementById('input').value.toLowerCase();
 
     let allRobots = document.querySelectorAll('#grid > div');
-    for (let i = 0; i < allRobots.length; i++) {
-      
+    for (div of allRobots){
+      div.remove();
     }
     
-    
+
     let filterRobot = robots.filter(item => {
         if (item.name.toLowerCase().includes(myInput)){
             return item;
