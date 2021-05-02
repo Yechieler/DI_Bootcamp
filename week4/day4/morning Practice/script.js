@@ -141,3 +141,208 @@ const users = {
     { id: 'user1', age: 44, name: 'picard' },
     { id: 'user3', age: 109, name: 'janeway' },
   ]
+
+
+
+  /*morning notes*/
+  // const population = {
+//   tokyo: 37833000,
+//   delhi: 24953000,
+//   shanghai: 22991000
+// }
+/* Object.Keys */
+// const keys = Object.keys(population);
+// console.log(keys);
+// Object.keys(population).forEach( key => {
+//   // console.log('key', key);
+// });
+/* Object.values */
+// const values = Object.values(population);
+// console.log(values);
+//
+// values.forEach( val => {
+//   console.log('val',val);
+// });
+/* Object.entries */
+// const entries = Object.entries(population);
+// console.log(entries);
+//
+// entries.forEach( ent => {
+//   console.log('enteries', ent);
+// });
+/* Object.FromEntries */
+// const population2 = [
+//   ['tokyo', '37833000'],
+//   ['delhi', '24953000'],
+//   ['shanghai', '22991000'],
+// ];
+// const population3 = Object.fromEntries(population2);
+// console.log(population3);
+/* Cloning */
+// const newPopulation = {...population}
+// console.log(newPopulation);
+// let jsonfile = '{"tokyo":37833000,"delhi":24953000,"shanghai":22991000,"bla":"nameof student"}';
+// console.log(jsonfile.tokyo);
+/* deep cloning */
+// let str = JSON.stringify(population)
+// console.log(str);
+// let test = JSON.parse(jsonfile);
+// console.log(test.tokyo);
+/* Merging */
+// const population = {
+//   tokyo: 37833000,
+//   delhi: 24953000,
+//   shanghai: 22991000
+// }
+// const population_2 = {
+//   tokyo: 87833000,
+//   telaviv: 7833000,
+//   newyork: 74953000,
+// }
+// const totalPopulation = {...population, ...population_2}
+// console.log(totalPopulation);
+/* Destructuring */
+const population = {
+  tokyo: 37833000,
+  delhi: 24953000,
+  shanghai: 22991000
+}
+// const a = population.tokyo;
+// const b = population.shanghai;
+// const c = population.delhi;
+// const {tokyo,shanghai,delhi} = population;
+// console.log(tokyo,delhi,shanghai);
+/* Spreading */
+// const population4 = {...population, tokyo:4444}
+// console.log(population4);
+/* Nested Object Destructuring */
+const population5 = {
+  tokyo: 1,
+  delhi: 4,
+  shanghai: 3,
+  datetime:{
+    time:5,
+    date:6
+  }
+}
+// const tokyo = population5.tokyo;
+// const {tokyo,datetime:{time,date}} = population5;
+// console.log(tokyo);
+/* Function Destructuring */
+// const dist = (obj) => {
+//   // const tokyo = obj.tokyo;
+//   // const delhi = obj.delhi;
+//   // const shanghai = obj.shanghai;
+//   // const time = obj.datetime.time;
+//   // const date = obj.datetime.date;
+//
+//   const {tokyo,delhi,shanghai,datetime:{time,date}} = obj;
+//   console.log(tokyo,delhi,shanghai,time,date);
+// }
+// dist(population5)
+/* this */
+// In the global scope, "this" is window .
+// In the global execution context (scope)
+// this === window // true
+// var x = 5;
+// const foo = () => {
+//   console.log(this.x);
+// }
+// foo();
+// var obj = {
+//         x: 2,
+//         a:foo
+// };
+// // obj.a = foo;
+// obj.a();
+// foo();
+/* Class */
+class someclass {
+  constructor(name, last){
+    this.name = name;
+    this.lastname = last;
+  }
+  getFullName(){
+    return this.name + " " + this.lastname
+  }
+  setName(param){
+    this.name = param;
+  }
+  setLastName(param) {
+    this.lastname = param;
+  }
+  aaaaa(ziv){
+    return ziv + '!';
+  }
+}
+//
+let c = new someclass('ziv','chen');
+// console.log(c.getFullName());
+let d = new someclass('Aviv','Ketter');
+// console.log(d.getFullName());
+c.setName('Eli')
+// console.log(c.getFullName());
+// console.log(d.getFullName());
+// console.log(c.getFullName());
+// let a = new someclass('Eli','Cohen');
+// console.log(a.getFullName());
+// //
+// b.setName('');
+// b.setLastName('')
+// console.log(b.getFullName());
+class Fruit {
+  constructor(name){
+    this.name = name;
+  }
+  setName(param){
+    this.name = param;
+  }
+  getName() {
+    return this.name;
+  }
+}
+// let apple = new Fruit('Aplle');
+// let orange = new Fruit('Orange');
+// console.log(apple.getName());
+// console.log(orange.getName());
+class Orange extends Fruit {
+  constructor(){
+    super('Orange');
+    this.color = '';
+  }
+  setColor(param){
+    this.color = param;
+  }
+}
+class Apple extends Fruit {
+  constructor(){
+    super('Apple');
+    this.color = '';
+  }
+  setColor(param){
+    this.color = param;
+  }
+  getColor(){
+    return this.color;
+  }
+}
+class TypoAplle extends Apple {
+  constructor(){
+    super();
+    this.sahpe ='cube';
+  }
+}
+let ta = new TypoAplle();
+console.log(ta.getName());
+let f = new Fruit();
+let o = new Orange();
+let a = new Apple();
+let ag = new Apple();
+// console.log(o.getName());
+// console.log(a.getName());
+// o.setColor('orange');
+// a.setColor('red');
+// ag.setColor('green');
+// console.log(a.getColor());
+// console.log(ag.getColor());
+// console.log(orange.getName());
