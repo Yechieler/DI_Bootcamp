@@ -34,4 +34,5 @@ const eraseAll=()=> {
     }
 }
 
+document.getElementById('buttondelete').addEventListener('click', removeData);
 document.getElementById('button').addEventListener('click', getData);
