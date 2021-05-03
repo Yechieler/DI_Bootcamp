@@ -23,7 +23,7 @@ const createGifs=(obj)=>{
         gif.setAttribute('src', obj.data[i].images['fixed_height_small'].url);
         gif.classList.add(i);
         document.getElementById('gifs').appendChild(gif);
-
+        
         }
 }
 const eraseAll=()=> {
@@ -34,5 +34,5 @@ const eraseAll=()=> {
     }
 }
 
-document.getElementById('buttondelete').addEventListener('click', removeData);
+document.getElementById('buttondelete').addEventListener('click', eraseAll);
 document.getElementById('button').addEventListener('click', getData);
