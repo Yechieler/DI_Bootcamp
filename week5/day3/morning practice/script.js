@@ -1,38 +1,82 @@
-let xhr = new XMLHttpRequest();
-let next = 0;
-function fetchData(){
-    let search = document.getElementById('search').value
-    let limit = document.getElementById('limit').value
-    xhr.open('GET',`https://api.giphy.com/v1/gifs/search?rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My&q=${search}&limit=${limit}&offset=${next}`)
-    xhr.responseType = 'json'; //or log JSON.parse(xhr.response) its the same thing  on line 7
-    xhr.send();  // send request
-    xhr.onload = function(){
-        // console.log(xhr.response);
-        createImages(xhr.response.data);
-    }
-    xhr.onerror = function(){
-        alert('Please try in a few minutes, server is down');
-    };
-    next = next + Number(limit);
+// Exercise 1:
+// Write a function compareToTen that takes a number
+// as an argument and returns a Promise that tests
+// if the value is less than or greater than the value 10.
+const compareToTen = (num) => {
+    return new Promise( (resolve,reject) => {
+      if(num > 10){
+        resolve('bal bla bla')
+      }
+      else{
+        reject('ha ha ha')
+      }
+    })
+    // return p;
+  }
+
+// let myPromise = compareToTen(70);
+compareToTen(7)
+.then(data => {
+  console.log('aaaa',data);
+})
+.catch(err => {
+  console.log('bbbb',err);
+})
+
+
+
+
+// Exercise 2:
+// Write two functions that use Promises that you can chain!
+// The first function:
+// makeAllCaps(), will take in an array of words
+// and capitalize them,
+// and then the second function, sortWords():
+// will sort the words in alphabetical order.
+// If the array contains anything but strings,
+// it should throw an error.
+// examples of array:
+// const arrayOfWords = ['cucumber', 'tomatos', 'avocado']
+// const complicatedArray = ['cucumber', 44, true]
+
+const makeAllCaps =(array) => {
+    return new Promise((resolve,reject)=>{
+        let capsArray = array.map(word =>{
+            if(typeof word === 'string'){
+                return word.toUpperCase();
+            }
+            else{
+                reject('Error: not all items in the array are strings!')
+            }
+        })
+        resolve(capsArray)
+    })
 }
 
-function createImages(arr) {
-    let root = document.getElementById('root')
-    root.innerHTML = '';
-    // console.log(arr);
-    // console.log(root);
-    arr.forEach((item,i) => {
-        let img = document.createElement('img');
-        img.setAttribute('src',item.images.fixed_height_small.url)
-        root.appendChild(img)
-    });
+makeAllCaps(['cucumber', 'tomatos', 'avocado'])
+.then(data => {
+    console.log(data);
+})
+.catch(err => {
+    console.log(err);
+})
+const sortWords =(array) => {
+    return new Promise((resolve,reject)=>{
+        if(array){
+            resolve(array.sort())
+        }
+        else {
+            reject('something went wrong')
+        }
+    })
 }
+sortWords(['cucumber', 'tomatos', 'avocado'])
+.then(sort=>{
+    console.log(sort);
+})
+.catch(err=>{
+    console.log(err);
+})
 
-function deleteAll(){
-    let root = document.getElementById('root');
-    root.innerHTML = '';
-}
 
-function nextImages(){
-    fetchData();
-}
+
