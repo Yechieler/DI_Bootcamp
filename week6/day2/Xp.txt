@@ -1,0 +1,39 @@
+-- select * from items
+-- order by price asc  -- price (lowest to highest).
+--where(price>=80)
+--order by price desc --price above 80 (80 included), ordered by price (highest to lowest).
+
+--select item_name, price from items -- alphabetical order (A-Z) – exclude ‘id’ from the results.
+--order by item_name asc 
+
+-- select * from purchases
+--  create table purchases(
+-- 	 customer_id smallint,
+-- 	 item_id smallint
+--  )
+insert into purchases (
+	customer_id,
+	item_id
+) 
+ values(1,null)
+
+
+
+select * from purchases
+--  insert into purchases (
+-- 	customer_id,
+-- 	item_id
+-- ) 
+--  values(2, 'Large Desk'),(3,'Fan')
+
+-- select * from purchases
+
+
+SELECT
+   *
+FROM
+ purchases
+-- INNER JOIN customers
+--     ON customer_id = id
+-- INNER JOIN customers
+--     ON customer_id = id;
