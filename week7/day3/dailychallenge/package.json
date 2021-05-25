@@ -1,0 +1,12 @@
+{
+  "name": "dailychallenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fs.js",
+  "scripts": {
+    "start": "nodemon fs.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
