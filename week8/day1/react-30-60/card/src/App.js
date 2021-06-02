@@ -1,70 +1,69 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
-import Card from './Card';
+import CardsList from './components/CardsList';
+import SearchBox from './components/SearchBox';
 import 'tachyons';
+import axios from 'axios'
 
-const robots = [
-  {
-    id:1,
-    name:'Artem',
-    email:'artem@gmail.com'
-  },
-  {
-    id:2,
-    name:'Jay',
-    email:'Jay@gmail.com'
-  },
-  {
-    id:3,
-    name:'John',
-    email:'John@gmail.com'
-  }
-]
-
-
-function App(){
-  return (
-    <> 
-    {
-      robots.map(item =>{
-        return <Card data={item}/>
-      })
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      arr: [],
+      searchText: '',
     }
-    </> 
-    // <Card name={robot[0]} email={robot[0].email} id={robot[0].id} />
-    // <Card name={robot[1]} email={robot[1].email} id={robot[1].id} />
-    // <Card name={robot[2]} email={robot[2].email} id={robot[2].id} />
-  );
+  }
+
+  componentDidMount = async()=>{
+    try{
+      let res = await axios.get('https://jsonplaceholder.typicode.com/users');
+      let data = await res.data;
+      this.setState({arr:data})
+    } catch(e) {
+      console.log(e);
+    }
+  }
+
+  //   //axios instead of fetch 
+  //    await axious.get('https://jsonplaceholder.typicode.com/users')
+  //   .then(res => res.data()) //not .json but .data
+  //   .then(data => {
+  //     // this.state.arr = data
+  //     // console.log(this.state.arr);
+  //     this.setState({arr:data})
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //   })
+  // }
+
+
+  //dont need this since its in our SearchBox
+  // handleChange = (event) => {
+  //   // console.log(event.target.value);
+  //   // this.setState({ searchText:event.target.value })
+  //   this.state.searchText = event.target.value;
+  // }
+
+  handleClick = (value) => {
+    console.log('click');
+    console.log(value);
+    this.setState({searchText:this.state.searchText});
+  }
+
+  render(){
+    const {arr,searchText} = this.state;
+
+    const filteredRobots = arr.filter(item=>{
+      return item.name.toLowerCase().includes(searchText.toLowerCase())
+    })
+
+    return (
+      <div className='tc'>
+        <SearchBox handleChange={this.handleChange} handleClick={this.handleClick}/>
+        <CardsList robots={filteredRobots} />
+      </div>
+    );
+  }
 }
-// function App(){
-//   return (
-//     <> 
-//     <Card name={'Artem'} email={'artem@gmail.com'} id={'1'} />
-//     <Card name={'Shy'} email={'Shy@gmail.com'} id={'2'} />
-//     <Card name={'Dan'} email={'Dan@gmail.com'} id={'3'} />
-//     </>
-//   );
-// }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
 export default App;
