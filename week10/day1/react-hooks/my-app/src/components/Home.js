@@ -1,16 +1,39 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import blog from '../blog.png';
+import {Link} from 'react-router-dom';
 
 class Home extends React.Component {
     render() {
-
-        return (
-            <div className='container'>
-            <h3 className='center'>Home</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempora eius ipsum saepe quasi sapiente quam eligendi voluptates fugit porro asperiores mollitia voluptatem debitis ipsa earum reprehenderit eos, soluta aperiam!</p>
-        </div>
-    )
-}
+		let {posts} = this.props;
+		console.log(posts);
+		return(
+			<div className="container home">
+				{
+					(posts.length>0) ?
+					posts.map((post) => {
+						return(
+						<div className="post card" key={post.id}>
+						<img src={blog} alt="blog" />
+						<div className="card-content">
+							<Link to={'/' + post.id}><span className="card-title red-text">{post.title}</span></Link>
+							<p>{post.body}</p>
+						</div>
+						</div>
+						);
+					})
+					:
+					<div className="center">No posts to show
+					</div>
+				}
+			</div>
+		)
+	}
 };
+const mapStateToProps = (state) => {
+	return {
+		posts: state.posts
+	}
+}
 
-export default Home;
+export default connect(mapStateToProps)(Home);

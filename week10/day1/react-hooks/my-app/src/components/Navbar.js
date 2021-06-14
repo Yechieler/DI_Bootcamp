@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
 
-export default function Navbar() {
+const Navbar=()=> {
     return (
         <nav className="nav-wrapper red darken-3">
             <Link className="brand-logo" to="./">Blog</Link>
@@ -15,3 +15,5 @@ export default function Navbar() {
         </nav>
     )
 }
+
+export default Navbar; 
