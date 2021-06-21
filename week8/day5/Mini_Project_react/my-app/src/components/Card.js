@@ -1,15 +1,15 @@
 import React from 'react';
+// import propTyes 
 
-
-class Card extends React.Component {
-    
-  render(){
+const Card =(props)=> {
     return (
-      <div>
-      <h1>Card</h1>
-    </div>
+      <header>
+      <h1>{props.title}</h1>
+    </header>
   );
 }
+Card.defaultProps ={
+  title: 'Task',
 }
 
 export default Card;
