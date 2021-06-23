@@ -99,18 +99,34 @@ form .form-inner input[type='submit']:hover, .welcome button:hover {
   background-position: 100% 0%;
 }
 
-form .form-inner input[type='button'] {
+form .form-inner input[id='button'] {
   display: inline-block;
   padding: 10px 15px;
   border-radius: 8px;
-  background-image: linear-gradient(to right, #00aeff 2%, #0059ff 25%,  #bb1bfa);
-  background-size: 200%;
+  background-image: linear-gradient(to right,  #bb1bfa 2%, #5e31c5 25%,  #0df13e);
+  background-size: 200%;           
   transition: 0.4s;
   color: #fff;
   font-weight: 700;
   cursor: pointer;
 }
 form .form-inner input[type='button']:hover, .welcome button:hover {
+  background-position: 100% 0%;
+}
+
+form .form-inner input[id='return'] {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, #00aeff 2%, #0059ff 25%,  #1800a3);
+  background-size: 200%;
+  transition: 0.4s;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+form .form-inner input[type='return']:hover, .welcome button:hover {
   background-position: 100% 0%;
 }
 
